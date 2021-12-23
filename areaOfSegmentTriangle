@@ -1,0 +1,24 @@
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+        DecimalFormat formatter = new DecimalFormat("###.##");
+        Scanner input = new Scanner(System.in);
+        final float PI = 3.14f;
+
+        System.out.print("Enter radius:");
+        float radius = input.nextFloat();
+        System.out.println("Enter angle:");
+        float angle = input.nextFloat();
+
+        System.out.println(formatter.format(areaCircleSegment(radius,PI,angle)));
+    }
+
+    private static float areaCircleSegment(float r, float PI, float a) {
+        return PI*r*r*a/360;
+    }
+}
+
