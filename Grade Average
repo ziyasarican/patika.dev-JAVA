@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int[] lesson = new int[6];
+        Scanner input = new Scanner(System.in);
+        float avg = 0;
+
+        for (int i = 0; i < 6; i++) {
+            System.out.print("Enter Lesson" + (i+1)+" Grade :");
+            lesson[i] = input.nextInt();
+            avg+=lesson[i];
+        }
+
+        avg = avg / 6;
+        System.out.println(avg>60 ? "Pass the exam" : "Fail the exam");
+    }
+}
