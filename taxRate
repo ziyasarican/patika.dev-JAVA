@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+        Scanner input = new Scanner(System.in);
+
+        float price = input.nextFloat();
+        float taxRate = (float) ((price>1000) ? (0.08) : (0.18));
+        float totalPrice = price + (price * taxRate);
+
+        System.out.println(totalPrice);
+    }
+}
