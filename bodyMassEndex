@@ -1,0 +1,21 @@
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+        Scanner input = new Scanner(System.in);
+        DecimalFormat formatter = new DecimalFormat("###.####");
+
+        System.out.print("Enter your height:");
+        float height = input.nextFloat();
+        System.out.print("Enter your weight:");
+        float weight = input.nextFloat();
+
+        System.out.println(formatter.format(bodyMassEndex(height,weight)));
+    }
+    static float bodyMassEndex(float h, float w){
+        return w/(h*h);
+    }
+}
