@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+        Scanner input = new Scanner(System.in);
+        String[][] greengrocer = {{"pear", "2.14"},{"apple", "3.67"},{"tomato", "1.11"},{"banana", "0.95"},{"eggplant", "5.0"}};
+
+
+        int[] kg = new int[5];
+        for (int i = 0; i < 5; i++) {
+            System.out.print(greengrocer[i][0] + " How Many kg? :");
+            kg[i] = input.nextInt();
+        }
+
+        float total = 0;
+        for (int i = 0; i < 5; i++) {
+            total += kg[i] * Float.parseFloat(greengrocer[i][1]);
+        }
+        System.out.println("Total Price: " + total);
+
+  /*      float pear = 2.14f;
+        float apple = 3.67f;
+        float tomato = 1.11f;
+        float banana = 0.95f;
+        float eggplant = 5.0f; */
+
+
+    }
+}
